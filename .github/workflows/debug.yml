@@ -10,7 +10,7 @@ jobs:
     steps:
 
     - name: Launch tmate session
-      uses: mxschmitt/action-tmate@v4
+      uses: mxschmitt/action-tmate@v3
       with:
         # 默认就会在 Actions 日志中显示 SSH/web terminal 链接
         wait-for-session: true
