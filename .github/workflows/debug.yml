@@ -1,0 +1,22 @@
+name: ImmortalWrt OAF Debug
+
+on:
+  workflow_dispatch:  # 手动触发
+
+jobs:
+  tmate-debug:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Launch tmate session
+      uses: mxschmitt/action-tmate@v4
+      with:
+        # 默认就会在 Actions 日志中显示 SSH/web terminal 链接
+        wait-for-session: true
+
+    - name: Optional - show system info
+      run: |
+        uname -a
+        df -hT
+        free -h
